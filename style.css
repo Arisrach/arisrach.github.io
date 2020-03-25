@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans&display=swap");
+
+body{
+    font-family: 'Fira Sans', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-family: 'Fira Sans', sans-serif !important;
+    font-weight: 800 !important;
+    color: #111111;
+}
+
+.s-aris{
+  border-radius: 20px;
+  background: #efefef;
+  box-shadow: 5px 5px 10px #d5d5d5, -5px -5px 10px #ffffff;
+}
+.bg-none{
+
+  background-color: #ededed00 !important;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background: linear-gradient(145deg, #efefef, #efefef);
+    box-shadow: 5px 5px 10px #d2d2d2, -5px -5px 10px #ffffff;
+    border-radius: 20px;
+}
+
+.table td, .table th {
+  border:0px !important;
+}
