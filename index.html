@@ -1,142 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COVID19</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/style.css">
-  
+  <title>Tailwind CSS Example</title>
+  <!-- <meta name="description" content="test"> -->
+  <!-- Link ke CDN Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body class="py-4" style="background:#efefef;">
-  <div class="text-center">
-  <h1>COVID19</h1>
-  <img src="https://image.flaticon.com/icons/svg/2151/2151395.svg" alt="" width="10%">
-  <p class="mb-0">INDONESIA</p>
-  <p><small>Live Data</small></p>
-  <p id="dateUpdate"><small>Last Update </small></p>
-  </div>
-<div class="container mt-4">
 
-    
-
-  <div class="row">
-
-    <div class="col-lg">
-    <div class="card text-white border-0 mb-3 text-dark s-aris">
-      <div class="card-header text-uppercase border-info bg-none font-weight-bolder">Total laporan</div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col my-auto">
-
-          <h5 class="card-title mb-0" id="daftar-total"> </h5>
-          <p class="text-uppercase mt-0"><small>orang</small></p>
-          </div>
-          <div class="col text-right my-auto">
-          <img src="https://image.flaticon.com/icons/svg/1747/1747852.svg" alt="" width="50%">
-          </div>
+<body class="bg-gray-100 font-sans antialiased">
+<div class="container mx-auto ">
+    <div class="flex flex-col @md:flex-row mt-4">
+          <!-- ... -->
+          <!-- Header -->
+          <header class="bg-blue-600 text-white py-6 border-2 border-black shadow-[6px_6px_0px_#000] rounded-md container">
+              <div class="container mx-auto text-center">
+                  <h1 class="text-3xl font-semibold warna-merah">Selamat Datang di Situs Kami</h1>
+                  <p class="mt-2 text-lg">Menggunakan Tailwind CSS untuk desain yang indah dan responsif</p>
+                </div>
+            </header>
+        </div>
         </div>
 
+  <!-- Main Content -->
+  <main class="container mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
+    <h2 class="text-2xl font-bold text-gray-800">Tentang Kami</h2>
+    <p class="mt-4 text-gray-700">
+      Kami adalah perusahaan yang berfokus pada pengembangan solusi kreatif dengan menggunakan teknologi terbaru.
+      Kami menggunakan Tailwind CSS untuk memastikan situs kami tampak profesional dan responsif.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+      <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold text-gray-800">Layanan 1</h3>
+        <p class="mt-2 text-gray-600">Desain web responsif dan aplikasi mobile yang mengutamakan pengalaman pengguna.</p>
+      </div>
+      <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold text-gray-800">Layanan 2</h3>
+        <p class="mt-2 text-gray-600">Pengembangan perangkat lunak kustom untuk meningkatkan efisiensi operasional perusahaan Anda.</p>
       </div>
     </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 mt-10">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Nama Perusahaan. Semua Hak Dilindungi.</p>
     </div>
+  </footer>
 
-    <div class="col-lg">
-    <div class="card text-white border-0 mb-3 text-dark s-aris" >
-      <div class="card-header text-uppercase bg-none border-warning border-2 font-weight-bolder">Total positif</div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col my-auto">
-            <h5 class="card-title mb-0" id="daftar-positif"> </h5>
-            <p class="text-uppercase mt-0"><small>orang</small></p>
-          </div>
-          <div class="col text-right my-auto">
-            <img src="https://image.flaticon.com/icons/svg/1747/1747888.svg" alt="" width="50%">
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    </div>
-
-    <div class="col-lg">
-    <div class="card text-white border-0 mb-3 text-dark s-aris" >
-      <div class="card-header text-uppercase bg-none border-success font-weight-bolder">Total Sembuh</div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col my-auto">
-          <h5 class="card-title mb-0" id="daftar-sembuh"> </h5>
-        <p class="text-uppercase mt-0"><small>orang</small></p>
-          </div>
-          <div class="col text-right my-auto">
-          <img src="https://image.flaticon.com/icons/svg/1747/1747870.svg" alt="" width="50%">
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    </div>
-
-    <div class="col-lg">
-    <div class="card text-white border-0 mb-3 text-dark s-aris" >
-      <div class="card-header text-uppercase border-danger bg-none font-weight-bolder">Total Kematian</div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col my-auto">
-          <h5 class="card-title mb-0" id="daftar-kematian"> </h5>
-        <p class="text-uppercase mt-0"><small>orang</small></p>
-          </div>
-          <div class="col text-right my-auto">
-            <img src="https://image.flaticon.com/icons/svg/1747/1747879.svg" alt="" width="50%">
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    </div>
-
-    </div>
-</div>
-
-  
-
-<div class="container">
-
-<!-- row -->
-<p class="text-center my-4 font-weight-light py-2 s-aris">Data Kasus Coronavirus Berdasarkan Provinsi</p>
-<div class="row" >
-<div class="table-responsive " style="max-height: 350px;">
-<table class="table table-striped w-100" >
-<thead>
-    <tr>
-      <th scope="col"> </th>
-      <th scope="col">Provinsi</th>
-      <th scope="col">Positif</th>
-      <th scope="col">Sembuh</th>
-      <th scope="col">Kematian</th>
-    </tr>
-  </thead>
-  <tbody id="daftar-provinsi">
-  
-  </tbody>
-</table>
-</div>
-</div>
-
-
-</div>
-
-<p class="text-center mb-0 mt-4">Design by	&copy; Arisrach | Data API by	&copy; mathdroid  &  &copy; Kawal</p>
-  
-  <script src="/script.js" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-  
-  
 </body>
+
 </html>
